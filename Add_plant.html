@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Plantation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f7;
+        }
+
+        /* Topbar */
+
+        .topbar {
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Layout */
+
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: white;
+            border-right: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            background: #f0f0f0;
+        }
+
+        /* Main Area */
+
+        .main {
+            flex: 1;
+            padding: 30px;
+        }
+
+        /* Form */
+
+        .form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            width: 500px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        /* Image Preview */
+
+        #preview {
+            width: 100%;
+            height: 150px;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: #888;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #219150;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="logo">🌱 Plantation Mission</div>
+        <div>Welcome, Student Name</div>
+    </div>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <a href="s_dashboard.html">🏠 Dashboard</a>
+            <a href="Add_plant.html">🌱 Add Plantation</a>
+            <a href="s_Records.html">📄 My Plantation Records</a>
+            <a href="s_Login.html">⏻ Logout</a>
+
+        </div>
+
+        <div class="main">
+
+            <h2>Add Plantation</h2>
+
+            <div class="form-box">
+
+                <form>
+
+                    <div class="form-group">
+                        <label>Plant Name</label>
+                        <input type="text" placeholder="Enter plant name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plant Type</label>
+                        <select>
+                            <option>Tree</option>
+                            <option>Flower</option>
+                            <option>Medicinal</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="Enter location">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plant Height (cm)</label>
+                        <input type="number" placeholder="Enter plant height">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea placeholder="Write description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plant Photo</label>
+
+                        <div id="preview">
+                            Image Preview
+                        </div>
+
+                        <input type="file" onchange="loadImage(event)">
+
+                    </div>
+                    <a href="Add_plant.html">
+                        <button type="submit">Submit Plantation</button>
+                    </a>
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function loadImage(event) {
+            let image = document.getElementById("preview");
+            image.innerHTML = "<img src='" + URL.createObjectURL(event.target.files[0]) + "' width='100%' height='100%'>";
+        }
+
+    </script>
+
+</body>
+
+</html>
