@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Plantation Records</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f7;
+        }
+
+        /* Topbar */
+
+        .topbar {
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Layout */
+
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: white;
+            border-right: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            background: #f0f0f0;
+        }
+
+        /* Main area */
+
+        .main {
+            flex: 1;
+            padding: 30px;
+        }
+
+        /* Table */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #27ae60;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        /* Status */
+
+        .verified {
+            color: green;
+            font-weight: bold;
+        }
+
+        .pending {
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="logo">🌱 Plantation Mission</div>
+        <div>Welcome Student</div>
+    </div>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <a href="s_dashboard.html">🏠 Dashboard</a>
+            <a href="Add_plant.html">🌱 Add Plantation</a>
+            <a href="s_Records.html">📄 My Plantation Records</a>
+            <a href="s_Login.html">⏻ Logout</a>
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main">
+
+            <h2>My Plantation Records</h2>
+
+            <table>
+
+                <tr>
+                    <th>Plant Name</th>
+                    <th>Type</th>
+                    <th>Height (cm)</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Neem</td>
+                    <td>Tree</td>
+                    <td>45</td>
+                    <td>School Garden</td>
+                    <td>12 May 2026</td>
+                    <td class="verified">Verified</td>
+                </tr>
+
+                <tr>
+                    <td>Mango</td>
+                    <td>Tree</td>
+                    <td>35</td>
+                    <td>City Park</td>
+                    <td>10 May 2026</td>
+                    <td class="pending">Pending</td>
+                </tr>
+
+                <tr>
+                    <td>Tulsi</td>
+                    <td>Medicinal</td>
+                    <td>20</td>
+                    <td>Home Garden</td>
+                    <td>08 May 2026</td>
+                    <td class="verified">Verified</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
