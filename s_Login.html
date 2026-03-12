@@ -3,11 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login</title>
+    <title>Student Login - Plantation Mission</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2ecc71, #27ae60);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 380px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .input-group input:focus {
+            border-color: #27ae60;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #27ae60;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background: #219150;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
+
+    <div class="container">
+
+        <h2>Student Login</h2>
+
+        <form>
+
+            <div class="input-group">
+                <label>Email ID</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+
+            <a href="s_dashboard.html">
+                <button type="button">Login</button>
+            </a>
+
+
+        </form>
+
+        <div class="signup-link">
+            Don't have an account? <a href="s_signup.html">Signup</a>
+        </div>
+
+    </div>
 
 </body>
 
