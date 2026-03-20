@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Login - Plantation Mission</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            font-family: Arial;
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 30px;
+            background: white;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background: #2e7d32;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        #error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="adminId" placeholder="Enter Admin ID">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="error"></p>
+    </div>
+
+    <script>
+        function login() {
+            var id = document.getElementById("adminId").value;
+            var pass = document.getElementById("password").value;
+
+            // Fixed ID & Password
+            var correctId = "admin";
+            var correctPass = "1234";
+
+            if (id === correctId && pass === correctPass) {
+                alert("Login Successful ✅");
+
+                // Next page open (dashboard)
+                window.location.href = "a_dashboard.html";
+            } else {
+                document.getElementById("error").innerText = "Invalid ID or Password ❌";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
