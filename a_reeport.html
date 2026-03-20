@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Reports - Plantation Mission</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f8f4;
+        }
+
+        .header {
+            background: #2e7d32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2e7d32;
+        }
+
+        /* Cards */
+        .card {
+            display: inline-block;
+            width: 220px;
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px gray;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #2e7d32;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 0px 5px gray;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background: #2e7d32;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        /* Filter */
+        .filter {
+            margin-top: 15px;
+        }
+
+        select,
+        button {
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        .Back {
+            text-align: center;
+
+            background: green;
+
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 120px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        Plantation Reports 📊🌱
+    </div>
+
+    <div class="container">
+        <h2>Summary</h2>
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <p>120</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Plantation</h3>
+            <p>350</p>
+        </div>
+
+        <div class="card">
+            <h3>Approved</h3>
+            <p>300</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p>50</p>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter">
+            <select>
+                <option selected disabled>Filter by Department</option>
+                <option>Computer Science</option>
+                <option>Biology</option>
+                <option>Commerce</option>
+            </select>
+
+            <select>
+                <option selected disabled>Filter by Status</option>
+                <option>Approved</option>
+                <option>Pending</option>
+            </select>
+
+            <button>Generate Report</button>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Department</th>
+                <th>Total Students</th>
+                <th>Plantations</th>
+                <th>Approved</th>
+                <th>Pending</th>
+            </tr>
+
+            <tr>
+                <td>Computer Science</td>
+                <td>50</td>
+                <td>150</td>
+                <td>130</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>Biology</td>
+                <td>40</td>
+                <td>120</td>
+                <td>100</td>
+                <td>20</td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="Back">
+        <a href="a_dashboard.html"> Back To DeshBoard</a>
+    </div>
+
+</body>
+
+</html>
